@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig    = {
     "DEFINE_MODULES" => "YES",
     "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
-    "SWIFT_OBJC_BRIDGING_HEADER" => "../../node_modules/calculator/ios/calculator-Bridging-Header.h"
+    "SWIFT_OBJC_BRIDGING_HEADER" => "../../node_modules/calculator/ios/calculator-Bridging-Header.h",
+    "OTHER_CPLUSPLUSFLAGS" => "-DRCT_NEW_ARCH_ENABLED=1"
   }
 
   install_modules_dependencies(s)
